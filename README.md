@@ -9,18 +9,5 @@ User Input → LLM → Structured Output → Pydantic Validation → FlightReque
 
 Goal : Retrieve context, generate answers with sources, flag low-confidence responses, fallback to search.
 
-   User Query
-       ↓
-    Embedding
-       ↓
-    FAISS Top-K Retrieval
-        ↓
-   Evidence Check
-        ↓
-   ┌───────────────┐
-   YES             NO
-   ↓                ↓
-  Generate        Fallback
-  Answer
-   ↓
-  Citations
+<img width="260" height="457" alt="image" src="https://github.com/user-attachments/assets/e2b59cb0-0ad1-4669-a230-dab6c6f880b3" />
+
