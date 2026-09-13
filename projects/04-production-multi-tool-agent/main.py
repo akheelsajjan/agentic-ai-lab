@@ -36,7 +36,7 @@ from agent.cost_router import run_with_routing
 
 
 queries = [
-    "What's the weather in Mumbai and calculate 25 * 4?",
+    "What's the latest news in AI in 2 sentenes and calculate 25 * 4?",
 ]
 
 for query in queries:
@@ -44,4 +44,10 @@ for query in queries:
 
     print(f"\nQuery: {query}")
     print("Answer:", response.content)
-    print("Metrics:", metrics)
+    print("Metrics:")
+    for k, v in metrics.items():
+        if isinstance(v, float):
+            print(f"  {k}: {v:.6f}")
+        else:
+            print(f"  {k}: {v}")
+    print("\n" + "-" * 50 + "\n")
