@@ -169,3 +169,38 @@ The 60-second expiry acts as a temporary lease so a crashed worker does not hold
 
 7. Dead Letter Queue
 If a job fails after all retry attempts, it is moved to: support_jobs_dlq
+
+
+
+##Project 07: Multi-Agent Research + Evaluation
+
+A multi-agent research system built with LangGraph where specialized agents independently analyze a question, a critic reviews their findings, and a writer produces the final answer.
+
+                         User
+                          ↓
+                    LangGraph
+                          ↓
+              ┌───────────┼───────────┐
+              ↓           ↓           ↓
+          Research     Technical    Industry
+           Agent        Agent        Agent
+              ↓           ↓           ↓
+              └───────────┼───────────┘
+                          ↓
+                        Critic
+                          ↓
+                        Writer
+                          ↓
+                    Final Answer
+                          ↓
+                      Evaluator
+                          ↓
+                    Quality Scores
+
+#Evaluation
+The evaluator scores:
+Relevance
+Accuracy
+Completeness
+
+Each category receives a score from 1 to 10.
